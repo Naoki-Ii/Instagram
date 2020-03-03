@@ -2,19 +2,22 @@
 //  AppDelegate.swift
 //  Instagram
 //
-//  Created by NAOKI II on 2020/03/03.
+//  Created by NAOKI II on 2020/03/01.
 //  Copyright © 2020 NAOKI.II. All rights reserved.
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    //SVProgressHUDをXcode 11で実行するための環境調節コード
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
